@@ -1,6 +1,5 @@
 main {
-
-  --white:#ebdcdc;
+  --white: #ebdcdc;
   --red: #f10000;
   --strong-red: #c50505;
   --stronger-white: #b6b4b4;
@@ -12,7 +11,7 @@ main {
   background: var(--white);
 
   & .card {
-    background:var(--red);
+    background: var(--red);
     width: 40vw;
     min-width: 300px;
     height: 60vh;
@@ -29,6 +28,14 @@ main {
       & div {
         position: relative;
 
+        & svg {
+          position: absolute;
+          right: -5px;
+          height: 30px;
+          cursor: pointer;
+          z-index: 3;
+        }
+
         & label {
           position: absolute;
           left: 0;
@@ -36,10 +43,9 @@ main {
           z-index: 2;
           transition: all 310ms ease;
           color: var(--white);
-
         }
 
-        & input{
+        & input {
           background: none;
           position: relative;
           outline: none;
@@ -50,12 +56,14 @@ main {
           z-index: 3;
           font-size: medium;
           cursor: text;
+          padding-right: 35px;
         }
 
-
-        & input:active + label, input:focus + label,input:valid + label{
-          transform: translate(-5px,-25px) scale(.8);
-          transition: all  310ms ease;
+        & input:active + label,
+        input:focus + label,
+        input:valid + label {
+          transform: translate(-5px, -25px) scale(0.8);
+          transition: all 310ms ease;
           color: var(--stronger-white);
         }
       }
@@ -63,17 +71,17 @@ main {
   }
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--stronger-white);
   align-self: center;
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
 }
 
-input[type='submit']{
+input[type="submit"] {
   background: var(--stronger-white);
   border-radius: 13px;
   border: none;
@@ -83,10 +91,8 @@ input[type='submit']{
   transition: all 300ms ease-out;
 }
 
-input[type='submit']:hover{
+input[type="submit"]:hover {
   background: var(--strong-red);
   color: var(--white);
   transition: all 300ms ease-in;
-
-
 }

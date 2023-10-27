@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+
+}
+
+header{
+  height: 30px;
+  width: 100%;
+  background: #d32929;
+
+  & nav{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: right;
+  }
+
+  & a{
+    height: 100%;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
+
+  & a:hover{
+    background: #000;
+  }
+
+}
+
+main{
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  display: grid;
+  place-content: center;
+}
